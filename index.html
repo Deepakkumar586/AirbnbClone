@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <img src="images/airbnb-logo.png" alt="AirNb" class="img-logo" />
+        <div class="middle-item">
+          <p class="middle-anywhere">Anywhere</p>
+          <p class="middle-Any-week">Any week</p>
+          <p class="middle-Add-guests">Add guests</p>
+          <i class="fa-solid fa-magnifying-glass" id="serach-icon"></i>
+        </div>
+
+        <!-- right side -->
+        <div class="Right-side">
+          <p class="airnb-name">Airnb your home</p>
+          <i class="fa-solid fa-globe" id="globe"></i>
+          <div class="right-login-icon">
+            <i class="fa-solid fa-bars" id="side-bars"></i>
+            <i class="fa-solid fa-user" id="side-user"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- category -->
+      <div class="category-item">
+        <!-- all category -->
+        <div class="all-category">
+          <!-- individual category -->
+          <div class="individual-cat">
+            <img src="images/cat1.jpg" alt="Bed & Breakfasts" />
+            <p>Bed & Breakfasts</p>
+          </div>
+          <div class="individual-cat">
+            <img src="images/cat2.jpg" alt="Farms" />
+            <p>Farms</p>
+          </div>
+          <div class="individual-cat">
+            <img src="images/cat3.jpg" alt="Amazing View" />
+            <p>Amazing Views</p>
+          </div>
+          <div class="individual-cat">
+            <img src="images/cat4.jpg" alt="tropicals" />
+            <p>Tropical</p>
+          </div>
+          <div class="individual-cat">
+            <img src="images/cat5.jpg" alt="Top of the world" />
+            <p>Top of the world</p>
+          </div>
+          <div class="individual-cat">
+            <img src="images/cat6.jpg" alt="Houseboats" />
+            <p>Houseboats</p>
+          </div>
+          <div class="individual-cat">
+            <img src="images/cat7.jpg" alt="Cabins" />
+            <p>Cabins</p>
+          </div>
+          <div class="individual-cat">
+            <img src="images/cat8.jpg" alt="Beach" />
+            <p>Beach</p>
+          </div>
+        </div>
+
+        <!-- arrow -->
+        <span class="material-symbols-outlined" id="arraow">
+          arrow_forward_ios
+        </span>
+        <div class="filter">
+          <span class="material-symbols-outlined"> tune </span>
+          <p>Filter</p>
+        </div>
+
+        <div class="toggle-right-side">
+          <p>Display total before taxes</p>
+          <i class="fa-solid fa-toggle-on" id="toggle"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- hotel images and text -->
+    <div class="container">
+      <div class="hotel-grid">
+        <div class="hotel-card">
+          <img src="images/hotel1.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Miranda</p>
+          <p class="gray-text">20-25 Feb</p>
+          <p class="price">₹3,046 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel2.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Varanasi, India</p>
+            <div class="rating"></div>
+          </div>
+          <p class="gray-text">Hosted by Prabhat Kumar</p>
+          <p class="gray-text">24 Feb - 1 Mar</p>
+          <p class="price">₹1,712 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel3.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>4.93</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb Jul</p>
+          <p class="price">₹4,548 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel4.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>4.88</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Bishnu Homestay</p>
+          <p class="gray-text">12-17 Feb</p>
+          <p class="price">₹1,781 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel1.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Miranda</p>
+          <p class="gray-text">20-25 Feb</p>
+          <p class="price">₹3,046 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel2.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Varanasi, India</p>
+            <div class="rating"></div>
+          </div>
+          <p class="gray-text">Hosted by Prabhat Kumar</p>
+          <p class="gray-text">24 Feb - 1 Mar</p>
+          <p class="price">₹1,712 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel3.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>4.93</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb Jul</p>
+          <p class="price">₹4,548 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel4.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>4.88</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Bishnu Homestay</p>
+          <p class="gray-text">12-17 Feb</p>
+          <p class="price">₹1,781 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel1.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Miranda</p>
+          <p class="gray-text">20-25 Feb</p>
+          <p class="price">₹3,046 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel2.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Varanasi, India</p>
+            <div class="rating"></div>
+          </div>
+          <p class="gray-text">Hosted by Prabhat Kumar</p>
+          <p class="gray-text">24 Feb - 1 Mar</p>
+          <p class="price">₹1,712 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel3.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>4.93</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb Jul</p>
+          <p class="price">₹4,548 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel4.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>4.88</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Bishnu Homestay</p>
+          <p class="gray-text">12-17 Feb</p>
+          <p class="price">₹1,781 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel1.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Miranda</p>
+          <p class="gray-text">20-25 Feb</p>
+          <p class="price">₹3,046 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel2.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Varanasi, India</p>
+            <div class="rating"></div>
+          </div>
+          <p class="gray-text">Hosted by Prabhat Kumar</p>
+          <p class="gray-text">24 Feb - 1 Mar</p>
+          <p class="price">₹1,712 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel3.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>4.93</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb Jul</p>
+          <p class="price">₹4,548 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel4.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>4.88</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Bishnu Homestay</p>
+          <p class="gray-text">12-17 Feb</p>
+          <p class="price">₹1,781 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel1.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Miranda</p>
+          <p class="gray-text">20-25 Feb</p>
+          <p class="price">₹3,046 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel2.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Varanasi, India</p>
+            <div class="rating"></div>
+          </div>
+          <p class="gray-text">Hosted by Prabhat Kumar</p>
+          <p class="gray-text">24 Feb - 1 Mar</p>
+          <p class="price">₹1,712 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel3.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>4.93</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb Jul</p>
+          <p class="price">₹4,548 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel4.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>4.88</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Bishnu Homestay</p>
+          <p class="gray-text">12-17 Feb</p>
+          <p class="price">₹1,781 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel1.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>5.0</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Miranda</p>
+          <p class="gray-text">20-25 Feb</p>
+          <p class="price">₹3,046 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel2.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Varanasi, India</p>
+            <div class="rating"></div>
+          </div>
+          <p class="gray-text">Hosted by Prabhat Kumar</p>
+          <p class="gray-text">24 Feb - 1 Mar</p>
+          <p class="price">₹1,712 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel3.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>4.93</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb Jul</p>
+          <p class="price">₹4,548 night</p>
+        </div>
+        <div class="hotel-card">
+          <img src="images/hotel4.jpg" class="hotel-img" />
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>4.88</p>
+            </div>
+          </div>
+          <p class="gray-text">Hosted by Bishnu Homestay</p>
+          <p class="gray-text">12-17 Feb</p>
+          <p class="price">₹1,781 night</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- show more sction -->
+    <div class="Show-More-section">
+      <p>Continue exploring bed & breakfasts</p>
+      <button>Show More</button>
+    </div>
+
+    <!-- footer -->
+    <div class="all-footer">
+      <!-- first part -->
+      <div class="first-part">
+        <div class="first-part-text">
+          <p>Inspiration for future getaways</p>
+        </div>
+        <div class="footer-header">
+          <ul>
+            <li>Popular</li>
+            <li>Arts & culture</li>
+            <li>Outdoors</li>
+            <li>Mountains</li>
+            <li>Beach</li>
+            <li>Unique stays</li>
+            <li>Categories</li>
+            <li>Things To do</li>
+          </ul>
+          <!-- hr line -->
+          <div><hr style="width: 100%; margin: 20px 0px" /></div>
+        </div>
+        <div class="footer-text">
+          <div class="actual-text">
+            <h4>Canmore</h4>
+            <p>Apartment rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Banalmadena</h4>
+            <p>Flat rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Marbella</h4>
+            <p>Villa rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Mijas</h4>
+            <p>Flat rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Pescott</h4>
+            <p>Cottage rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Scottsdale</h4>
+            <p>Mansion rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Tucson</h4>
+            <p>Flat rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Jasper</h4>
+            <p>Cabin rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Mijas</h4>
+            <p>Flat rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Mountain View</h4>
+            <p>Family-friendly rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Devonport</h4>
+            <p>Cottage rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Mallacoota</h4>
+            <p>Beach house rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Mijas</h4>
+            <p>Flat rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Ibiza</h4>
+            <p>Holiday rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Santa Barbara</h4>
+            <p>Apartment rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Anahein</h4>
+            <p>Family-friendly rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Sonoma</h4>
+            <p>Cabin rentals</p>
+          </div>
+          <div class="actual-text">
+            <h4>Show More</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- horizenatl line -->
+      <div>
+        <hr style="width: 100%; margin: 20px 0px; color: rgb(236, 231, 231)" />
+      </div>
+
+      <!-- second part -->
+      <div class="second-part">
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Help Centre</a></li>
+            <li><a href="#">AirCover</a></li>
+            <li><a href="#">Anti-discrimination</a></li>
+            <li><a href="#">Disability support</a></li>
+            <li><a href="#">Cancellation options</a></li>
+            <li><a href="#">Report neighbourhood concern</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Hosting</h3>
+          <ul>
+            <li><a href="#">Airbnb your home</a></li>
+            <li><a href="#">AirCover for Hosts</a></li>
+            <li><a href="#">Hosting resources</a></li>
+            <li><a href="#">Community forum</a></li>
+            <li><a href="#">Hosting responsibly</a></li>
+            <li><a href="#">Join a free Hosting class</a></li>
+            <li><a href="#">Find a co-host</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Airbnb</h3>
+          <ul>
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="#">New features</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Airbnb.org emergency stays</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <hr style="width: 80%; margin: 20px 70px; color: rgb(236, 231, 231)" />
+      </div>
+
+      <div class="bottom-footer">
+        <div class="third-part">
+          <div class="left-side">
+            <p>
+              © 2025 Airbnb, Inc. · <a href="#">Privacy</a> ·
+              <a href="#">Terms</a> · <a href="#">Sitemap</a> ·
+              <a href="#">Company details</a>
+            </p>
+          </div>
+          <div class="right-side">
+            <div class="language-currency">
+              <span>🌍 English (IN)</span>
+              <span>₹ INR</span>
+            </div>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

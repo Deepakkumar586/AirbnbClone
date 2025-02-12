@@ -1,0 +1,599 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* HEADER */
+header .navbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 2px solid rgb(216, 211, 211);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: white;
+}
+
+/* LOGO */
+header .navbar .img-logo {
+    height: 70px;
+    width: 130px;
+    margin-left: 100px;
+}
+
+/* SEARCH BAR */
+header .middle-item {
+    height: 40px;
+    width: 320px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px rgb(214, 208, 208) solid;
+    border-radius: 40px;
+    padding: 10px;
+    font-weight: bold;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+header .middle-item #serach-icon {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 50px;
+    padding: 4px;
+}
+
+header .middle-item .middle-anywhere,
+header .middle-item .middle-Any-week {
+    padding: 6px;
+    border-right: 2px solid rgb(222, 220, 220);
+    font-weight: 500;
+}
+
+header .middle-item .middle-Add-guests {
+    padding: 6px;
+    font-weight: 500;
+    color: rgb(136, 132, 132);
+}
+
+/* RIGHT SIDE */
+header .Right-side {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+    margin-right: 100px;
+}
+
+header .Right-side .airnb-name {
+    padding: 8px 12px;
+    border-radius: 45px;
+    transition: all 0.3s ease-in-out;
+}
+
+header .Right-side .airnb-name:hover {
+    background-color: #e3e0e0a9;
+    cursor: pointer;
+}
+
+header .Right-side #globe {
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+header .Right-side #globe:hover {
+    background-color: #e3e0e0ac;
+    cursor: pointer;
+}
+
+header .Right-side .right-login-icon {
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 60px;
+    height: 20px;
+    padding: 10px;
+    border: rgb(188, 185, 185) 1px solid;
+    border-radius: 50px;
+}
+
+header .Right-side .right-login-icon #side-bars,
+header .Right-side .right-login-icon #side-user {
+    color: gray;
+    cursor: pointer;
+}
+
+/* CATEGORY SECTION */
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    white-space: nowrap;
+    position: fixed;
+    top: 101px;
+    background-color: white;
+}
+
+.all-category {
+    display: flex;
+
+    gap: 28px;
+    overflow-x: auto;
+    padding-bottom: 3px;
+}
+
+.individual-cat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
+    cursor: pointer;
+    min-width: 100px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.individual-cat img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.individual-cat p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #aeaaaa;
+}
+
+.individual-cat p:hover {
+    color: #1a1a1a;
+}
+
+.individual-cat:hover img {
+    transform: scale(1.1);
+}
+
+.individual-cat:hover {
+    opacity: 0.8;
+}
+
+/* FILTER SECTION */
+#arraow {
+    border: 1px solid rgb(203, 199, 199);
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 6px 12px;
+    border: 1px solid rgb(210, 204, 204);
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.filter:hover {
+    border: 1px solid black;
+    background: rgba(178, 176, 176, 0.1);
+}
+
+.toggle-right-side {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgb(215, 212, 212);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.toggle-right-side:hover {
+    border: 1px solid rgb(32, 32, 32);
+}
+
+
+
+@media (max-width: 1024px) {
+    header .navbar {
+        grid-template-columns: 1fr 2fr 1fr;
+        padding: 10px;
+    }
+
+    header .navbar .img-logo {
+        margin-left: 20px;
+        width: 100px;
+    }
+
+    header .middle-item {
+        width: 260px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    header .Right-side {
+        gap: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header .navbar .img-logo {
+        width: 90px;
+        height: 30px;
+        margin: 0;
+    }
+
+    header .middle-item {
+        width: 100%;
+        max-width: 280px;
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    header .Right-side {
+        justify-content: center;
+        margin: 0;
+        gap: 10px;
+    }
+
+    .category-item {
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .all-category {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .individual-cat {
+        min-width: 80px;
+    }
+
+    #arraow {
+        display: none;
+    }
+
+    .filter {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+.container {
+    margin: 220px 0px 0px 0px;
+    width: 100%;
+}
+
+/* Grid Layout for Hotels */
+.hotel-grid {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hotel-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.hotel-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.location {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating i {
+    color: black;
+    margin-right: 5px;
+}
+
+.rating p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.gray-text {
+    color: gray;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.price {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        margin: 230px 20px;
+
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        margin: 240px 90px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        margin: 350px 30px;
+    }
+
+    .hotel-grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.Show-More-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.Show-More-section p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.Show-More-section button {
+    background-color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+/* responoive show more sction */
+
+@media (max-width: 640px) {
+    .Show-More-section {
+        margin-top: -300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+/* footer */
+.all-footer {
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+/* First Part */
+.first-part-text p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Footer Header */
+.footer-header ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+}
+
+.footer-header li {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aeaaaa;
+}
+
+.footer-header li:hover {
+    text-decoration: underline;
+}
+
+/* Footer Text Section */
+.footer-text {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+    margin-top: 20px;
+}
+
+.actual-text h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.actual-text p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Second Part */
+.second-part {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 10px 0;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #222;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+/* Third Part - Bottom Footer */
+.bottom-footer {
+    padding: 15px 20px;
+    font-size: 14px;
+}
+
+.third-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left-side p {
+    margin: 0;
+}
+
+.left-side a {
+    text-decoration: none;
+    color: #222;
+    margin: 0 5px;
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-currency {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #222;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-header ul {
+        justify-content: center;
+    }
+
+    .footer-text {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .second-part {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-column {
+        min-width: unset;
+    }
+
+    .third-part {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-text {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
