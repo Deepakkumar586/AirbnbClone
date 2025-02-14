@@ -22,76 +22,112 @@
   <body>
     <header>
       <div class="navbar">
-        <img src="images/airbnb-logo.png" alt="AirNb" class="img-logo" />
-        <div class="middle-item">
-          <p class="middle-anywhere">Anywhere</p>
-          <p class="middle-Any-week">Any week</p>
-          <p class="middle-Add-guests">Add guests</p>
-          <i class="fa-solid fa-magnifying-glass" id="serach-icon"></i>
+        <div class="logo">
+          <img src="images/airbnb-logo.png" alt="Airbnb" />
         </div>
 
-        <!-- right side -->
-        <div class="Right-side">
-          <p class="airnb-name">Airnb your home</p>
-          <i class="fa-solid fa-globe" id="globe"></i>
-          <div class="right-login-icon">
-            <i class="fa-solid fa-bars" id="side-bars"></i>
-            <i class="fa-solid fa-user" id="side-user"></i>
-          </div>
+        <div id="nav-container">
+          <nav class="nav-links">
+            <a href="#" class="active">Homes</a>
+            <a href="#">Experiences</a>
+          </nav>
+        </div>
+
+        <div class="right-section">
+          <a href="#">Airbnb your home</a>
+          <i class="fa-solid fa-globe" id="icon"></i>
+          <i class="fa-solid fa-bars" id="menu-toggle"></i>
+          <i class="fa-solid fa-user" id="profile-icon"></i>
         </div>
       </div>
 
-      <!-- category -->
-      <div class="category-item">
-        <!-- all category -->
-        <div class="all-category">
-          <!-- individual category -->
-          <div class="individual-cat">
-            <img src="images/cat1.jpg" alt="Bed & Breakfasts" />
-            <p>Bed & Breakfasts</p>
+      <div class="search-bar">
+        <div class="search-option">
+          <span>Where</span>
+          <input type="text" placeholder="Search destinations" />
+        </div>
+        <div class="search-option">
+          <span>Check in</span>
+          <input type="text" placeholder="Add dates" />
+        </div>
+        <div class="search-option">
+          <span>Check out</span>
+          <input type="text" placeholder="Add dates" />
+        </div>
+        <div class="search-option">
+          <span>Who</span>
+          <input type="text" placeholder="Add guests" />
+        </div>
+        <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+      </div>
+
+
+      <div class="filter-bar">
+        <button class="scroll-left">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="categories">
+          <div class="category active">
+            <i class="fa-solid fa-seedling"></i>
+            <span>Farms</span>
           </div>
-          <div class="individual-cat">
-            <img src="images/cat2.jpg" alt="Farms" />
-            <p>Farms</p>
+          <div class="category">
+            <i class="fa-solid fa-star"></i>
+            <span>Icons</span>
           </div>
-          <div class="individual-cat">
-            <img src="images/cat3.jpg" alt="Amazing View" />
-            <p>Amazing Views</p>
+          <div class="category">
+            <i class="fa-solid fa-mountain-sun"></i>
+            <span>Amazing views</span>
           </div>
-          <div class="individual-cat">
-            <img src="images/cat4.jpg" alt="tropicals" />
-            <p>Tropical</p>
+          <div class="category">
+            <i class="fa-solid fa-water-ladder"></i>
+            <span>Amazing pools</span>
           </div>
-          <div class="individual-cat">
-            <img src="images/cat5.jpg" alt="Top of the world" />
-            <p>Top of the world</p>
+          <div class="category">
+            <i class="fa-solid fa-campground"></i>
+            <span>Camping</span>
           </div>
-          <div class="individual-cat">
-            <img src="images/cat6.jpg" alt="Houseboats" />
-            <p>Houseboats</p>
+          <div class="category">
+            <i class="fa-solid fa-chess-rook"></i>
+            <span>Castles</span>
           </div>
-          <div class="individual-cat">
-            <img src="images/cat7.jpg" alt="Cabins" />
-            <p>Cabins</p>
+          <div class="category">
+            <i class="fa-solid fa-mug-hot"></i>
+            <span>Bed & breakfasts</span>
           </div>
-          <div class="individual-cat">
-            <img src="images/cat8.jpg" alt="Beach" />
-            <p>Beach</p>
+          <div class="category">
+            <i class="fa-solid fa-ship"></i>
+            <span>Houseboats</span>
+          </div>
+          <div class="category">
+            <i class="fa-solid fa-house"></i>
+            <span>Cabins</span>
+          </div>
+          <div class="category">
+            <i class="fa-solid fa-umbrella-beach"></i>
+            <span>Beach</span>
           </div>
         </div>
 
-        <!-- arrow -->
-        <span class="material-symbols-outlined" id="arraow">
-          arrow_forward_ios
-        </span>
-        <div class="filter">
-          <span class="material-symbols-outlined"> tune </span>
-          <p>Filter</p>
-        </div>
+        <button class="scroll-right">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
 
-        <div class="toggle-right-side">
-          <p>Display total before taxes</p>
-          <i class="fa-solid fa-toggle-on" id="toggle"></i>
+        <button class="filter-btn">
+          <i class="fa-solid fa-sliders"></i>
+          Filters
+        </button>
+
+        <div class="toggle-switch">
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <div>
+            <span>Display total before taxes</span>
+            <i class="fa-solid fa-toggle-on" id="toggle"></i>
+          </div>
         </div>
       </div>
     </header>
@@ -100,298 +136,293 @@
     <div class="container">
       <div class="hotel-grid">
         <div class="hotel-card">
-          <img src="images/hotel1.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>5.0</p>
-            </div>
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 1 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 1 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 1 Image 3" />
           </div>
-          <p class="gray-text">Hosted by Miranda</p>
-          <p class="gray-text">20-25 Feb</p>
-          <p class="price">₹3,046 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel2.jpg" class="hotel-img" />
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
           <div class="hotel-info">
             <p class="location">Varanasi, India</p>
-            <div class="rating"></div>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.8</div>
           </div>
           <p class="gray-text">Hosted by Prabhat Kumar</p>
           <p class="gray-text">24 Feb - 1 Mar</p>
-          <p class="price">₹1,712 night</p>
+          <p class="price">₹1,712/night</p>
         </div>
+
         <div class="hotel-card">
-          <img src="images/hotel3.jpg" class="hotel-img" />
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
           <div class="hotel-info">
             <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>4.93</p>
-            </div>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
           </div>
           <p class="gray-text">Hosted by Elaheh</p>
-          <p class="gray-text">13-18 Feb Jul</p>
-          <p class="price">₹4,548 night</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
         </div>
         <div class="hotel-card">
-          <img src="images/hotel4.jpg" class="hotel-img" />
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
           <div class="hotel-info">
             <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>4.88</p>
-            </div>
-          </div>
-          <p class="gray-text">Hosted by Bishnu Homestay</p>
-          <p class="gray-text">12-17 Feb</p>
-          <p class="price">₹1,781 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel1.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>5.0</p>
-            </div>
-          </div>
-          <p class="gray-text">Hosted by Miranda</p>
-          <p class="gray-text">20-25 Feb</p>
-          <p class="price">₹3,046 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel2.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Varanasi, India</p>
-            <div class="rating"></div>
-          </div>
-          <p class="gray-text">Hosted by Prabhat Kumar</p>
-          <p class="gray-text">24 Feb - 1 Mar</p>
-          <p class="price">₹1,712 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel3.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>4.93</p>
-            </div>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
           </div>
           <p class="gray-text">Hosted by Elaheh</p>
-          <p class="gray-text">13-18 Feb Jul</p>
-          <p class="price">₹4,548 night</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
         </div>
         <div class="hotel-card">
-          <img src="images/hotel4.jpg" class="hotel-img" />
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
           <div class="hotel-info">
             <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>4.88</p>
-            </div>
-          </div>
-          <p class="gray-text">Hosted by Bishnu Homestay</p>
-          <p class="gray-text">12-17 Feb</p>
-          <p class="price">₹1,781 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel1.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>5.0</p>
-            </div>
-          </div>
-          <p class="gray-text">Hosted by Miranda</p>
-          <p class="gray-text">20-25 Feb</p>
-          <p class="price">₹3,046 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel2.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Varanasi, India</p>
-            <div class="rating"></div>
-          </div>
-          <p class="gray-text">Hosted by Prabhat Kumar</p>
-          <p class="gray-text">24 Feb - 1 Mar</p>
-          <p class="price">₹1,712 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel3.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>4.93</p>
-            </div>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
           </div>
           <p class="gray-text">Hosted by Elaheh</p>
-          <p class="gray-text">13-18 Feb Jul</p>
-          <p class="price">₹4,548 night</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
         </div>
         <div class="hotel-card">
-          <img src="images/hotel4.jpg" class="hotel-img" />
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
           <div class="hotel-info">
             <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>4.88</p>
-            </div>
-          </div>
-          <p class="gray-text">Hosted by Bishnu Homestay</p>
-          <p class="gray-text">12-17 Feb</p>
-          <p class="price">₹1,781 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel1.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>5.0</p>
-            </div>
-          </div>
-          <p class="gray-text">Hosted by Miranda</p>
-          <p class="gray-text">20-25 Feb</p>
-          <p class="price">₹3,046 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel2.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Varanasi, India</p>
-            <div class="rating"></div>
-          </div>
-          <p class="gray-text">Hosted by Prabhat Kumar</p>
-          <p class="gray-text">24 Feb - 1 Mar</p>
-          <p class="price">₹1,712 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel3.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>4.93</p>
-            </div>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
           </div>
           <p class="gray-text">Hosted by Elaheh</p>
-          <p class="gray-text">13-18 Feb Jul</p>
-          <p class="price">₹4,548 night</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
         </div>
         <div class="hotel-card">
-          <img src="images/hotel4.jpg" class="hotel-img" />
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
           <div class="hotel-info">
             <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>4.88</p>
-            </div>
-          </div>
-          <p class="gray-text">Hosted by Bishnu Homestay</p>
-          <p class="gray-text">12-17 Feb</p>
-          <p class="price">₹1,781 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel1.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>5.0</p>
-            </div>
-          </div>
-          <p class="gray-text">Hosted by Miranda</p>
-          <p class="gray-text">20-25 Feb</p>
-          <p class="price">₹3,046 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel2.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Varanasi, India</p>
-            <div class="rating"></div>
-          </div>
-          <p class="gray-text">Hosted by Prabhat Kumar</p>
-          <p class="gray-text">24 Feb - 1 Mar</p>
-          <p class="price">₹1,712 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel3.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>4.93</p>
-            </div>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
           </div>
           <p class="gray-text">Hosted by Elaheh</p>
-          <p class="gray-text">13-18 Feb Jul</p>
-          <p class="price">₹4,548 night</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
         </div>
         <div class="hotel-card">
-          <img src="images/hotel4.jpg" class="hotel-img" />
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
           <div class="hotel-info">
             <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>4.88</p>
-            </div>
-          </div>
-          <p class="gray-text">Hosted by Bishnu Homestay</p>
-          <p class="gray-text">12-17 Feb</p>
-          <p class="price">₹1,781 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel1.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>5.0</p>
-            </div>
-          </div>
-          <p class="gray-text">Hosted by Miranda</p>
-          <p class="gray-text">20-25 Feb</p>
-          <p class="price">₹3,046 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel2.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Varanasi, India</p>
-            <div class="rating"></div>
-          </div>
-          <p class="gray-text">Hosted by Prabhat Kumar</p>
-          <p class="gray-text">24 Feb - 1 Mar</p>
-          <p class="price">₹1,712 night</p>
-        </div>
-        <div class="hotel-card">
-          <img src="images/hotel3.jpg" class="hotel-img" />
-          <div class="hotel-info">
-            <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>4.93</p>
-            </div>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
           </div>
           <p class="gray-text">Hosted by Elaheh</p>
-          <p class="gray-text">13-18 Feb Jul</p>
-          <p class="price">₹4,548 night</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
         </div>
         <div class="hotel-card">
-          <img src="images/hotel4.jpg" class="hotel-img" />
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
           <div class="hotel-info">
             <p class="location">Pokhara, Nepal</p>
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>4.88</p>
-            </div>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
           </div>
-          <p class="gray-text">Hosted by Bishnu Homestay</p>
-          <p class="gray-text">12-17 Feb</p>
-          <p class="price">₹1,781 night</p>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
+        </div>
+        <div class="hotel-card">
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
+        </div>
+        <div class="hotel-card">
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
+        </div>
+        <div class="hotel-card">
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
+        </div>
+        <div class="hotel-card">
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
+        </div>
+        <div class="hotel-card">
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
+        </div>
+        <div class="hotel-card">
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
+        </div>
+        <div class="hotel-card">
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
+        </div>
+        <div class="hotel-card">
+          <div class="slider">
+            <img src="images/hotel1.jpg" class="active" alt="Hotel 2 Image 1" />
+            <img src="images/hotel2.jpg" alt="Hotel 2 Image 2" />
+            <img src="images/hotel3.jpg" alt="Hotel 2 Image 3" />
+          </div>
+          <button id="button" class="prev">&lt;</button>
+          <button id="button" class="next">&gt;</button>
+          <span class="material-symbols-outlined" id="heart"> favorite </span>
+
+          <div class="hotel-info">
+            <p class="location">Pokhara, Nepal</p>
+            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+          </div>
+          <p class="gray-text">Hosted by Elaheh</p>
+          <p class="gray-text">13-18 Feb</p>
+          <p class="price">₹4,548/night</p>
         </div>
       </div>
     </div>
@@ -568,5 +599,6 @@
       </div>
     </div>
 
+   <script src="index.js"></script>
   </body>
 </html>
