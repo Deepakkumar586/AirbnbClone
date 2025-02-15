@@ -1,4 +1,3 @@
-
 // Navbar
 const navContainer = document.getElementById("nav-container");
 window.addEventListener("scroll", () => {
@@ -21,7 +20,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
 // category
 const filterbar = document.querySelector(".filter-bar");
 
@@ -31,30 +29,6 @@ window.addEventListener("scroll", () => {
   } else {
     filterbar.classList.remove("sticky-filter");
   }
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const hotelCards = document.querySelectorAll(".hotel-card");
-
-  hotelCards.forEach((card) => {
-    let images = card.querySelectorAll(".slider img");
-    let currentIndex = 0;
-    let prevButton = card.querySelector(".prev");
-    let nextButton = card.querySelector(".next");
-
-    nextButton.addEventListener("click", function () {
-      images[currentIndex].classList.remove("active");
-      currentIndex = (currentIndex + 1) % images.length;
-      images[currentIndex].classList.add("active");
-    });
-
-    prevButton.addEventListener("click", function () {
-      images[currentIndex].classList.remove("active");
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      images[currentIndex].classList.add("active");
-    });
-  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
