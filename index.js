@@ -1,7 +1,7 @@
 // Navbar
 const navContainer = document.getElementById("nav-container");
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 10) {
+  if (window.scrollY > 5) {
     navContainer.innerHTML = `
       <div class="middle-item">
           <p class="middle-anywhere">Anywhere</p>
@@ -20,11 +20,22 @@ window.addEventListener("scroll", () => {
   }
 });
 
+window.addEventListener("scroll", () => {
+  const containersearch = document.querySelector(".containersearch");
+
+  if (window.scrollY > 5) {
+    containersearch.classList.add("hide-search");
+  } else {
+    containersearch.classList.remove("hide-search");
+  }
+});
+
+
 // category
 const filterbar = document.querySelector(".filter-bar");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 5) {
     filterbar.classList.add("sticky-filter");
   } else {
     filterbar.classList.remove("sticky-filter");
