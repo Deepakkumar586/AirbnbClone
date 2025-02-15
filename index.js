@@ -23,8 +23,6 @@ window.addEventListener("scroll", () => {
 
 
 // category
-
-// const filterbar = document.getElementsByClassName("filter-bar")
 const filterbar = document.querySelector(".filter-bar");
 
 window.addEventListener("scroll", () => {
