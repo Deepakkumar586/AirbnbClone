@@ -144,7 +144,7 @@ header.Right-side {
 }
 
 #search-btn {
-    background-color: red;
+    background-color: rgb(205, 72, 116);
     color: white;
     font-size: 20px;
     border-radius: 50px;
@@ -438,19 +438,16 @@ input:checked + .slider:before {
     box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 770px) {
+@media (max-width: 799px) {
     .filter-bar {
-        top: 590px; /* Adjust karne ke liye */
+         /* top: 590px;  */
+         display: none;
     }
     .sticky-filter {
         top: 80px;
-        width: 100vw; /* Pure screen width cover karne ke liye */
+        width: 100vw; 
     }
 }
-
-
-
-
 
 /* Hotels card */
 .container {
@@ -591,7 +588,7 @@ input:checked + .slider:before {
 /* Responsive Show More Section */
 @media (max-width: 640px) {
     .Show-More-section {
-        margin-top: -300px;
+        margin-top: 100px;
         display: flex;
         flex-direction: column;
         justify-content: center;
