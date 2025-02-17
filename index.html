@@ -39,24 +39,49 @@
         </div>
 
         <div id="nav-container">
-          <nav class="nav-links">
-            <a href="#" class="active">Homes</a>
-            <a href="#">Experiences</a>
+          <nav class="nav-links d-flex justify-content-center mt-3">
+            <a href="#" class="active" id="home-tab">Home</a>
+            <a href="#" id="experience-tab">Experiences</a>
           </nav>
         </div>
 
         <div class="right-section">
-          <a href="#" >Holly  Hotels</a>
+          <a href="#">Holly Hotels</a>
           <i class="fa-solid fa-globe" id="icon"></i>
-          <div class="right-side-user"> <i class="fa-solid fa-bars" id="menu-toggle"></i>
-            <i class="fa-solid fa-user" id="profile-icon"></i></div>
+          <div class="right-side-user dropdown show">
+            <i
+              class="fa-solid fa-bars"
+              class="dropdown-toggle"
+              role="button"
+              id="menu-toggle dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            ></i>
+            <i
+              class="fa-solid fa-user"
+              class="dropdown-toggle"
+              id="profile-icon dropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            ></i>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <p class="dropdown-item" href="#">Signup</p>
+              <p class="dropdown-item" href="#">Login</p>
+              <hr class="dropdown-divider" />
+              <p class="dropdown-item" href="#">Airbnb your home</p>
+              <p class="dropdown-item" href="#">Host on experience</p>
+              <p class="dropdown-item" href="#">Help center</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="containersearch mt-5">
-        <div
-          class="searchbar d-flex justify-content-center align-items-center"
-        >
+      <!-- home -->
+      <div id="home-section" class="containersearch mt-5">
+        <div class="searchbar d-flex justify-content-center align-items-center">
           <div class="d-flex flex-column">
             <strong>Where</strong>
             <input type="text" placeholder="Search destinations" />
@@ -82,6 +107,34 @@
         </div>
       </div>
 
+      <!-- Experience section -->
+      <div
+        id="experience-section"
+        class="containersearch mt-5"
+        style="display: none"
+      >
+        <div class="searchbar d-flex justify-content-center align-items-center">
+          <div class="d-flex flex-column">
+            <strong>Where</strong>
+            <input type="text" placeholder="Search destinations" />
+          </div>
+          <div class="vr"></div>
+          <div class="d-flex flex-column">
+            <strong>Date</strong>
+            <input type="text" placeholder="Add dates" />
+          </div>
+          <div class="vr"></div>
+          <div class="d-flex flex-column">
+            <strong>Who</strong>
+            <input type="text" placeholder="Add guests" />
+          </div>
+          <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- category with filter section  -->
       <div class="filter-bar">
         <button class="scroll-left">
           <i class="fa-solid fa-chevron-left"></i>
@@ -133,12 +186,14 @@
         <button class="scroll-right">
           <i class="fa-solid fa-chevron-right"></i>
         </button>
-
-        <button class="filter-btn">
-          <i class="fa-solid fa-sliders"></i>
-          Filters
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#filterModal"
+        >
+          <i class="fa-solid fa-sliders"></i> Filters
         </button>
-
         <div class="toggle-switch">
           <div>
             <span>Display total before taxes</span>
@@ -150,6 +205,192 @@
         </div>
       </div>
     </header>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="filterModal"
+      tabindex="80"
+      aria-labelledby="filterModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close btn-close-left"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <h5 class="modal-title" id="filterModalLabel">Filters</h5>
+          </div>
+          <div class="modal-body">
+            <h5 class="place-model-name">Type of place</h5>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="home-tab"
+                  data-toggle="tab"
+                  href="#home"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                  >Any Type</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="profile-tab"
+                  data-toggle="tab"
+                  href="#profile"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                  >Room</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="contact-tab"
+                  data-toggle="tab"
+                  href="#contact"
+                  role="tab"
+                  aria-controls="contact"
+                  aria-selected="false"
+                  >Entire Home</a
+                >
+              </li>
+            </ul>
+            <hr class="dropdown-divider" style="margin-top: 6%" />
+            <h5 class="mt-3 price-range-model">Price range</h5>
+            <p>Nightly prices before fees and taxes</p>
+            <div class="range_container">
+              <div class="sliders_control">
+                <div id="fromSliderTooltip" class="slider-tooltip">115</div>
+                <input
+                  id="fromSlider"
+                  type="range"
+                  value="120"
+                  min="50"
+                  max="350"
+                  steps="10"
+                />
+                <div id="toSliderTooltip" class="slider-tooltip">120</div>
+                <input
+                  id="toSlider"
+                  type="range"
+                  value="260"
+                  min="50"
+                  max="350"
+                  steps="10"
+                />
+              </div>
+
+              <!--scale steps defined by data-steps value -->
+              <div id="scale" class="scale" data-steps="50"></div>
+            </div>
+            <div class="range-labels">
+              <div class="min-label">
+                <span class="label-text">Minimum</span>
+                <span id="minPrice">₹870</span>
+              </div>
+              <div class="max-label">
+                <span class="label-text">Maximum</span>
+                <span id="maxPrice">₹26000+</span>
+              </div>
+            </div>
+            <hr class="dropdown-divider" style="margin-top: 6%" />
+            <div class="room-beds-conatiner">
+              <p class="heading-rooms-beds">Rooms and beds</p>
+              <div class="room-items">
+                <div class="bedrooms-items">
+                  <p class="bedrooms-name">Bedrooms</p>
+                  <div class="bedromms-right-corner">
+                    <p class="sub-items">-</p>
+                    <p class="bedrooms-counter">Any</p>
+                    <p class="add-items">+</p>
+                  </div>
+                </div>
+                <div class="bedrooms-items">
+                  <p class="bedrooms-name">Beds</p>
+                  <div class="bedromms-right-corner">
+                    <p class="sub-items">-</p>
+                    <p class="bedrooms-counter">Any</p>
+                    <p class="add-items">+</p>
+                  </div>
+                </div>
+                <div class="bedrooms-items">
+                  <p class="bedrooms-name">Bathrooms</p>
+                  <div class="bedromms-right-corner">
+                    <p class="sub-items">-</p>
+                    <p class="bedrooms-counter">Any</p>
+                    <p class="add-items">+</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="dropdown-divider" style="margin-top: 1%" />
+            <!-- Amenities section -->
+             <div class="amenities">
+              <p class="amenities-heading">Amenities</p>
+              <div class="all-amenities">
+                <!--icon -->
+                <div class="individual-amenities">
+                  <i class="fa-solid fa-wifi"></i>
+                <p>Wifi</p>
+                </div>
+                <div class="individual-amenities">
+                  <i class="fa-solid fa-kitchen-set"></i>
+                <p>Kitchen</p>
+                </div>
+                <div class="individual-amenities">
+                  <i class=""><span class="material-symbols-outlined">
+                    heat_pump
+                    </span></i>
+                <p>Washing machine</p>
+                </div>
+              </div>
+              <div class="all-amenities">
+                <!--icon -->
+                <div class="individual-amenities">
+                  <i class=""><span class="material-symbols-outlined">
+                    local_laundry_service
+                    </span></i>
+                <p>Dryer</p>
+                </div>
+                <div class="individual-amenities">
+                  <i class=""><span class="material-symbols-outlined">
+                    heat_pump
+                    </span></i>
+                <p>Air conditioning</p>
+                </div>
+                <div class="individual-amenities">
+                  <i class="fa-solid fa-temperature-three-quarters"></i>
+                <p>Heating</p>
+                </div>
+              </div>
+
+             </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              onclick="clearFilters()"
+            >
+              Clear all
+            </button>
+            <button type="button" class="btn btn-dark">
+              Show 1,000+ places
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Hotels information -->
     <div class="container">
@@ -857,7 +1098,9 @@
             <li>Things To do</li>
           </ul>
           <!-- hr line -->
-          <div><hr style="width: 100%; margin: 20px 0px" /></div>
+          <div>
+            <hr style="width: 100%; margin: 20px 0px" />
+          </div>
         </div>
         <div class="footer-text">
           <div class="actual-text">
