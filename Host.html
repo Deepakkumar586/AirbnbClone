@@ -1,11 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <title>Document</title>
+    <link rel="stylesheet" href="Host.css" />
 </head>
+
 <body>
+    <header>
+        <div class="logo">
+            <img src="images/airbnb-logo.png" width="100px" height="auto" />
+        </div>
+        <p class="ready-to-airbnb">Ready to Airbnb it?</p>
+        <div class="right-side-nav">
+            <i class="fa-solid fa-house"></i>
+            <p class="signup-btn">Airbnb Setup</p>
+        </div>
+    </header>
+
+    <!-- left and right section -->
+    <div class="container">
+        <div class="left-side">
+            <span class="name-airbnb">Airbnb it.</span>
+            <br />
+            <span class="earn-line">You could earn</span>
+            <!-- rupee section -->
+            <h4 class="rupee-name">₹21,888</h4>
+            <span class="night-number">6 nights</span><span> </span><span class="second-span-night">at an estimated
+                ₹3,127 a night</span>
+            <div class="container-range">
+                <div class="range-slider">
+                    <div id="slider_thumb" class="range-slider_thumb"></div>
+                    <div class="range-slider_line">
+                        <div id="slider_line" class="range-slider_line-fill"></div>
+                    </div>
+                    <input id="slider_input" class="range-slider_input" type="range" value="20" min="0" max="100" />
+                </div>
+            </div>
+            <p class="esitimate-earning-text">
+                Learn how we estimate your earnings
+            </p>
+            <div class="search-button">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="search-content">
+                    <div class="location">Lucknow</div>
+                    <div class="details">Entire place • 2 bedrooms</div>
+                </div>
+            </div>
+        </div>
+        <!-- right side map -->
+        <div id="map-view" style="display: none">Right Side</div>
+    </div>
+
+    <!-- third sections -->
+    <div class="third-section-container">
+        <div class="third-first-heading">
+            <h3>Airbnb it easily with Airbnb Setup</h3>
+        </div>
+        <!-- images -->
+        <div class="third-section-image">
+            <div class="third-section-image">
+                <img src="images/third-section-image.png" alt="Host 1" />
+            </div>
+        </div>
+    </div>
+
+    <!-- fourthe section content -->
+    <div class="fourth-section">
+        <div class="guidence-section">
+            <h5>One-to-one guidance from a Superhost</h5>
+            <p>
+                We’ll match you with a Superhost in your area, who’ll guide you from
+                your first question to your first guest – by phone, video call or
+                chat.
+            </p>
+        </div>
+        <div class="guest-section">
+            <h5>An experienced guest for your first booking</h5>
+            <p>
+                For your first booking, you can choose to welcome an experienced guest
+                who has at least three stays and a good track record on Airbnb.
+            </p>
+        </div>
+        <div class="support-section">
+            <h5>Specialised support from Airbnb</h5>
+            <p>
+                New Hosts get one-tap access to specially trained Community Support
+                agents who can help with everything from account issues to billing
+                support.
+            </p>
+        </div>
+    </div>
+
+    <!-- fifth section  -->
+    <div class="fifth-section">
+        <div class="aircover-section">
+            <h1 class="heading-aircover">
+                <span class="air-name">air<span style="color: black;">cover</span>
+                    <p class="for-hosts">for Hosts</p>
+            </h1>
+        </div>
+        <div class="airbnb-protection">
+            <h2>Airbnb it with top‑to‑bottom protection</h2>
+        </div>
+        <div class="all-information">
+            <div class="comparison-table">
+                <div class="header">
+                    <p class="highlight">Airbnb</p>
+                    <p>Competitors</p>
+                </div>
+                <hr style="width: 80%; margin: 20px 0px;color: black; background: gray;" />
+
+                <div class="feature">
+                    <div class="text-check">
+                        <p class="feature-title">Guest identity verification</p>
+                        <div class="checkmark-row">
+                            <span class="checkmark">✔</span>
+                            <span class="checkmark">✔</span>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Our comprehensive verification system checks details such as name, address, government ID,
+                        and more to
+                        confirm the identity of guests who book on Airbnb.
+                    </p>
+
+                </div>
+                <div class="feature">
+                    <div class="text-check">
+                        <p class="feature-title">Reservation screening
+                        </p>
+                        <div class="checkmark-row">
+                            <span class="checkmark">✔</span>
+                            <span class="crossmark">✘</span>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Our proprietary technology analyses hundreds of factors in each reservation and blocks certain
+                        bookings that show a high risk for disruptive parties and property damage.
+                    </p>
+
+                </div>
+
+                <div class="feature">
+                    <div class="text-check">
+                        <p class="feature-title">$3m damage protection</p>
+                        <div class="checkmark-row">
+                            <span class="checkmark">✔</span>
+                            <span class="crossmark">✘</span>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Airbnb reimburses you for damage caused by guests to your home and belongings and includes these
+                        specialised protections:
+                    </p>
+
+                </div>
+                <div class="feature">
+                    <div class="text-check">
+                        <p class="feature-title">Art & valuables</p>
+                        <div class="checkmark-row">
+                            <span class="checkmark">✔</span>
+                            <span class="crossmark">✘</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="feature">
+                    <div class="text-check">
+                        <p class="feature-title">Auto & boat
+                        </p>
+                        <div class="checkmark-row">
+                            <span class="checkmark">✔</span>
+                            <span class="crossmark">✘</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="feature">
+                    <div class="text-check">
+                        <p class="feature-title">Pet damage
+                        </p>
+                        <div class="checkmark-row">
+                            <span class="checkmark">✔</span>
+                            <span class="crossmark">✘</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="feature">
+                    <div class="text-check">
+                        <p class="feature-title">Income loss
+
+                        </p>
+                        <div class="checkmark-row">
+                            <span class="checkmark">✔</span>
+                            <span class="crossmark">✘</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="feature">
+                    <div class="text-check">
+                        <p class="feature-title">Deep cleaning
+
+                        </p>
+                        <div class="checkmark-row">
+                            <span class="checkmark">✔</span>
+                            <span class="crossmark">✘</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="feature">
+                    <div class="text-check">
+                        <p class="feature-title">$1m USD liability insurance
+
+                        </p>
+                        <div class="checkmark-row">
+                            <span class="checkmark">✔</span>
+                            <span class="checkmark">✔</span>
+                        </div>
+                    </div>
+                    <p class="description">
+                        You’re protected in the rare event that a guest gets hurt or their belongings are damaged or
+                        stolen.
+                    </p>
+
+
+                </div>
+                <div class="feature">
+                    <div class="text-check">
+                        <p class="feature-title">24-hour safety line
+
+                        </p>
+                        <div class="checkmark-row">
+                            <span class="checkmark">✔</span>
+                            <span class="crossmark">✘</span>
+                        </div>
+                    </div>
+                    <p class="description">
+                        If you ever feel unsafe, our app provides one-tap access to specially trained safety agents, day
+                        or night.
+                    </p>
+
+
+                </div>
+                <div class="competitors-last-line">
+                    <p style="color: gray;">Comparison is based on public information and free offerings by top competitors as of 22/10. <Span style="text-decoration: underline; font: 400;font-size: 20px;color: black;">Find details and exclusions here</Span></p>
+                </div>
+            </div>
+
+            <div class="learn-more">
+                <button>Learn More</button>
+            </div>
+        </div>
+
+
+
+    </div>
+
     
+
+
+    <script src="Host.js"></script>
 </body>
+
 </html>

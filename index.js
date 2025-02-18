@@ -2,23 +2,38 @@
 const navContainer = document.getElementById("nav-container");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 5) {
+    // Replace with the new structure on scroll
     navContainer.innerHTML = `
-      <div class="middle-item">
+     <div class="middle-item">
           <p class="middle-anywhere">Anywhere</p>
           <p class="middle-Any-week">Any week</p>
           <p class="middle-Add-guests">Add guests</p>
           <i class="fa-solid fa-magnifying-glass" id="search-icons"></i>
       </div>
-  `;
+    `;
   } else {
+    // Keep the original structure when scrolled back to top
     navContainer.innerHTML = `
-      <nav class="nav-links">
-          <a href="#" class="active">Homes</a>
-          <a href="#">Experiences</a>
+      <nav class="nav-links d-flex justify-content-center mt-3">
+        <a href="#" class="active" id="home-tab">Home</a>
+        <a href="#" id="experience-tab">Experiences</a>
       </nav>
-  `;
+    `;
+    // Reattach event listeners after content change
+    attachEventListeners();
   }
 });
+
+// Attach event listeners initially
+attachEventListeners();
+
+// Function to reattach event listeners after replacing content
+function attachEventListeners() {
+  const homeTab = document.getElementById("home-tab");
+  const experienceTab = document.getElementById("experience-tab");
+  homeTab.onclick = () => showSection("home");
+  experienceTab.onclick = () => showSection("experience");
+}
 
 window.addEventListener("scroll", () => {
   const containersearch = document.querySelector(".containersearch");
@@ -55,64 +70,42 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // map show start
-document.querySelector('.show-button').addEventListener('click', function() {
-  const hotelGrid = document.querySelector('.container .hotel-grid');
-  const mapView = document.getElementById('map-view');
-  const button = this.querySelector('button');
-  const icon = this.querySelector('i');
+document.querySelector(".show-button").addEventListener("click", function () {
+  const hotelGrid = document.querySelector(".container .hotel-grid");
+  const mapView = document.getElementById("map-view");
+  const button = this.querySelector("button");
+  const icon = this.querySelector("i");
 
-  if (mapView.style.display === 'none' || mapView.style.display === '') {
-    hotelGrid.style.display = 'none';
-    mapView.style.display = 'block';
-    button.innerText = 'Show List';
-    icon.classList.remove('fa-map');
-    icon.classList.add('fa-list');
+  if (mapView.style.display === "none" || mapView.style.display === "") {
+    hotelGrid.style.display = "none";
+    mapView.style.display = "block";
+    button.innerText = "Show List";
+    icon.classList.remove("fa-map");
+    icon.classList.add("fa-list");
   } else {
-    hotelGrid.style.display = 'flex';
-    mapView.style.display = 'none';
-    button.innerText = 'Show Map';
-    icon.classList.remove('fa-list');    
-    icon.classList.add('fa-map');  
+    hotelGrid.style.display = "flex";
+    mapView.style.display = "none";
+    button.innerText = "Show Map";
+    icon.classList.remove("fa-list");
+    icon.classList.add("fa-map");
   }
 });
 // map show end
 
-
-
-
 // tab for home and experience
-function switchTab(
-  activeTabId,
-  inactiveTabId,
-  activeSectionId,
-  inactiveSectionId
-) {
-  document.getElementById(activeSectionId).style.display = "block";
-  document.getElementById(inactiveSectionId).style.display = "none";
-  document.getElementById(activeTabId).classList.add("active");
-  document.getElementById(inactiveTabId).classList.remove("active");
+function showSection(section) {
+  const homeSection = document.getElementById("home-section");
+  const experienceSection = document.getElementById("experience-section");
+
+  if (section === "home") {
+    homeSection.style.display = "block";
+    experienceSection.style.display = "none";
+  } else if (section === "experience") {
+    homeSection.style.display = "none";
+    experienceSection.style.display = "block";
+  }
 }
-// Ensure initial active tab and section on page load
-window.addEventListener("DOMContentLoaded", function () {
-  switchTab("home-tab", "experience-tab", "home-section", "experience-section");
-});
-// Event listener for Home tab
-document.getElementById("home-tab").addEventListener("click", function () {
-  switchTab("home-tab", "experience-tab", "home-section", "experience-section");
-});
-// Event listener for Experience tab
-document
-  .getElementById("experience-tab")
-  .addEventListener("click", function () {
-    switchTab(
-      "experience-tab",
-      "home-tab",
-      "experience-section",
-      "home-section"
-    );
-  });
 
 // range slider
 document.addEventListener("DOMContentLoaded", () => {
@@ -262,29 +255,28 @@ function clearFilters() {
 
 // rooms beds js code
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".bedrooms-items").forEach(item => {
-      const minusBtn = item.querySelector(".sub-items");
-      const plusBtn = item.querySelector(".add-items");
-      const counter = item.querySelector(".bedrooms-counter");
-      let count = 0;
-      minusBtn.style.visibility = "hidden";
+  document.querySelectorAll(".bedrooms-items").forEach((item) => {
+    const minusBtn = item.querySelector(".sub-items");
+    const plusBtn = item.querySelector(".add-items");
+    const counter = item.querySelector(".bedrooms-counter");
+    let count = 0;
+    minusBtn.style.visibility = "hidden";
 
-      plusBtn.addEventListener("click", function () {
-          count++;
-          counter.textContent = count + "+";
-          minusBtn.style.visibility = "visible";
-      });
+    plusBtn.addEventListener("click", function () {
+      count++;
+      counter.textContent = count + "+";
+      minusBtn.style.visibility = "visible";
+    });
 
-      minusBtn.addEventListener("click", function () {
-          if (count > 1) {
-              count--;
-              counter.textContent = count + "+";
-          } else {
-              count = 0;
-              counter.textContent = "Any";
-              minusBtn.style.visibility = "hidden"; // Hide "-" button again
-          }
-      });
+    minusBtn.addEventListener("click", function () {
+      if (count > 1) {
+        count--;
+        counter.textContent = count + "+";
+      } else {
+        count = 0;
+        counter.textContent = "Any";
+        minusBtn.style.visibility = "hidden"; // Hide "-" button again
+      }
+    });
   });
 });
-
