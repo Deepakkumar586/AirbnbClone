@@ -40,6 +40,48 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// arrow left and right
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollLeftBtn = document.querySelector(".scroll-left");
+  const scrollRightBtn = document.querySelector(".scroll-right");
+  const categories = document.querySelector(".categories");
+
+  scrollLeftBtn.addEventListener("click", function () {
+    categories.scrollBy({ left: -200, behavior: "smooth" });
+  });
+
+  scrollRightBtn.addEventListener("click", function () {
+    categories.scrollBy({ left: 200, behavior: "smooth" });
+  });
+});
+
+
+// map show start
+document.querySelector('.show-button').addEventListener('click', function() {
+  const hotelGrid = document.querySelector('.container .hotel-grid');
+  const mapView = document.getElementById('map-view');
+  const button = this.querySelector('button');
+  const icon = this.querySelector('i');
+
+  if (mapView.style.display === 'none' || mapView.style.display === '') {
+    hotelGrid.style.display = 'none';
+    mapView.style.display = 'block';
+    button.innerText = 'Show List';
+    icon.classList.remove('fa-map');
+    icon.classList.add('fa-list');
+  } else {
+    hotelGrid.style.display = 'flex';
+    mapView.style.display = 'none';
+    button.innerText = 'Show Map';
+    icon.classList.remove('fa-list');    
+    icon.classList.add('fa-map');  
+  }
+});
+// map show end
+
+
+
+
 // tab for home and experience
 function switchTab(
   activeTabId,
