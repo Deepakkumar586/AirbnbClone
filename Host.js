@@ -16,7 +16,9 @@ window.addEventListener("resize",showSliderValue);
 slider_input.addEventListener('input', showSliderValue, false);
 
 
-// collapse
+
+//app-collapse
+
 const collapses = document.querySelectorAll("[app-collapse-header-btn]");
 
 const handleInitCollapse = (btnElement, parentEle) => {
