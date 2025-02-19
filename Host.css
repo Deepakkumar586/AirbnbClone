@@ -58,9 +58,10 @@ header .ready-to-airbnb {
 
 .container {
     display: flex;
+    gap: 40px;
     font-family: Arial, sans-serif;
     width: 100%;
-    margin: 110px 210px;
+    margin: 110px 110px;
 }
 
 .name-airbnb {
@@ -227,9 +228,20 @@ header .ready-to-airbnb {
 
 /* Right side map view */
 #map-view {
-    margin-top: 20px;
-    background-color: #ff385c;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 }
+
+#map-view iframe {
+    width: 100%;
+    height: 590px;
+    border: 0;
+}
+
 
 /* Third section container */
 .third-section-container {
@@ -430,3 +442,97 @@ header .ready-to-airbnb {
     font-size: 18px;
     cursor: pointer;
 }
+
+/* sixth section */
+.sixth-section{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 90px;
+}
+.sixth-section .sixth-section-left{
+    width: 50%;
+}
+.sixth-section-left p{
+    font-size: 49px;
+    font-weight: 600;
+}
+
+.app-collapse{
+    --padding: 15px;
+    --radius: 10px;
+    --border-color: #cdcdcd;
+    --transition-time: 250ms;
+    --title-foni-size: 18px;
+    --title-color: #111;
+    --shadow-color: rgba(0,0,0,0.1);
+    --bckground-color: #e9e9e9;
+    --collapse-timing-function: cubic-bezier(0.83, 0.02, 0.81, 0.42);
+    border-radius: var(--radius);
+    filter: drop-shadow(0px 3px 2px var(--shadow-color));
+  }
+  .collapse-panel{
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: all var(--transition-time) var(--collapse-timing-function);
+    background-color: #eee;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    opacity: 0;
+    margin-bottom: 10px;
+    border-radius:  0 0 var(--radius) var(--radius);
+    background-color: var(--bckground-color);
+    
+  }
+  .collapse-header-button{
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-inline: var(--padding);
+    padding-block: var(--padding);
+    border: 1px solid var(--border-color);
+    border-bottom-width: 0px;
+    border-radius: var(--radius) var(--radius) 0 0;
+    transition: var(--transition-time);
+    cursor: pointer;
+    background-color: var(--bckground-color);
+    
+  }
+  .collapse-header-button[aria-expanded="false"]{
+    border-radius:  var(--radius) var(--radius) var(--radius) var(--radius);
+    border-bottom-width: 1px;
+  }
+  .collapse-title{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--title-color);
+    font-size : var(--title-foni-size);
+  }
+  .collapse-icon{
+    position: absolute;
+    width: 14px;
+    right: 20px;
+    top: 21px;
+    transform-origin: center;
+    transition: var(--transition-time);
+  }
+  .collapse-header-button[aria-expanded="false"] .icon-path-line{
+    d: path('M4 4L78 76.5L152 4');
+  }
+  .icon-path-line {
+    d: path('M4 78 78 7l74 71');
+    stroke: var(--title-color);
+    stroke-linecap: round;
+    stroke-width: 8px;
+    transition: var(--transition-time);
+  }
+  .collapse-panel-inner-wrapper {
+    padding-inline: var(--padding);
+    overflow: hidden;
+  }
+  .collapse-panel.app-collapse-expanded{
+    grid-template-rows: 1fr;
+    opacity: 1;
+    padding-bottom: var(--padding);
+    
+  }
